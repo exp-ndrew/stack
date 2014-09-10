@@ -1,7 +1,7 @@
-<h1>Stuck Overflaw</h1>
+<h1>Top Questions</h1>
 
 <ul>
-  <% Question.all.each do | question | %>
+<% Question.all.each do | question | %>
     <li><%= link_to "#{question.question}", question_path(question) %></li>
-  <% end %>
+<% end %>
 </ul>
