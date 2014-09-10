@@ -2,7 +2,7 @@
 
 <p><%= @question.content %></p>
 
-<ul>
+<ul class="responses">
   <% @question.responses.each do |response| %>
     <li><%= response.response %></li>
   <% end %>

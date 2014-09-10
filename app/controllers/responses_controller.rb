@@ -9,10 +9,15 @@ class ResponsesController < ApplicationController
     @response = @question.responses.new(response_params)
     if @response.save()
       flash[:notice] = "Saved"
+      respond_to do |format|
+        # format.html { redirect_to question_path(response_params[:question_id]) }
+        format.js
+      end
     else
       flash[:alert] = "Failed"
+      redirect_to question_path(response_params[:question_id])
     end
-    redirect_to question_path(response_params[:question_id])
+    # redirect_to question_path(response_params[:question_id])
   end
 
 private
