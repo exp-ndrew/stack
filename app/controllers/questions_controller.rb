@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
 
+  before_filter :authorize, only: [:new, :create, :destroy]
+
   def index
   end
 
@@ -16,6 +18,10 @@ class QuestionsController < ApplicationController
       flash[:notice] = "Your question sucks. Fail! Try again."
       render "new"
     end
+  end
+
+  def show
+    @question = Question.find(params[:id])
   end
 
   def destroy
