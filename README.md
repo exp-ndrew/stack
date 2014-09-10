@@ -9,6 +9,8 @@ A clone of Stack Overflow.
 
 Authentication
 
+* fails even when it's entered right on login page
+
 
 ## User Stories
 
