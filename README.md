@@ -1,15 +1,16 @@
-CURRENTLY WORKING ON:
+# stack
+
+## About
+
+A clone of Stack Overflow.
 
 
+## CURRENTLY WORKING ON:
 
-* users, votes, questions, responses could be the possible models
-
-
-
+Authentication
 
 
-
-
+## User Stories
 
 * As a user, I want to ask a question, so that I can get help with a programming problem I'm having. Users must have an account and sign in to ask questions.
 
@@ -36,4 +37,21 @@ This is totally untested and is just to give you an idea of the direction to go 
 
 * As a user, I want to vote up questions I like, so that awesome questions get displayed higher on the list of questions and on search results. Hint: make votes polymorphic.
 
+## Setup
+
+1. Clone the repository using `$ git clone`
+1. Run `$ rake db:create`, `$ rake db:migrate`, and `$ rake db:seed` from the directory you cloned into
+1. Run `$ rails server`
+1. Go to [http://localhost:3000/](http://localhost:3000/) in a web browser to use the program — Click the Log In button at the top right and use the default login `hi@aol.com` with password `go`. You can create a new user with the "Sign Up" link at the top right.
+
+## Meta
+
+10 September 2014
+
+
+[Katharine Chen](http://github.com/katharinechen) and [Andrew M Westling](http://github.com/expandrew)
+via [Epicodus](http://www.learnhowtoprogram.com/lessons/stack-overflow-clone)
+
+## License
+MIT
 
