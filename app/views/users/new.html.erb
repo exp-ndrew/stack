@@ -1,0 +1,19 @@
+<div class="col-md-4">
+  <h2>Sign Up</h2>
+
+  <%= form_for @user do |f| %>
+
+
+      <div class="form-group">
+        <%= f.label :full_name %>
+        <%= f.text_field :full_name, :class => "form-control" %>
+        <%= f.label :email %>
+        <%= f.text_field :email, :class => "form-control" %>
+        <%= f.label :password %>
+        <%= f.password_field :password, :class => "form-control" %>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, :class => "form-control" %>
+      </div>
+      <%= f.submit "Sign Up", :class => "btn btn-default" %>
+  <% end %>
+</div>
