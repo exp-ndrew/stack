@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+  <%= render "layouts/navbar" %>
+
   <div id="notice" style="background: green; color: white; text-align:center;">
     <%= flash[:notice] %>
   </div>
@@ -17,12 +20,11 @@
     </div>
   <% end %>
 
-  <%= render "layouts/login_signup" %>
-
-  <div class="container">
-    <div class="col-md-4"></div>
-    <%= yield %>
-    <div class="col-md-4"></div>
+    <div class="container">
+      <div class="col-md-4"></div>
+      <%= yield %>
+      <div class="col-md-4"></div>
+    </div>
   </div>
 </body>
 
