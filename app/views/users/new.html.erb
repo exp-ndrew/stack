@@ -1,6 +1,10 @@
 <div class="col-md-4">
   <h2>Sign Up</h2>
 
+  <% if current_user %>
+    <%= redirect_to root_url %>
+  <% end %>
+
   <%= form_for @user do |f| %>
 
       <div class="form-group">

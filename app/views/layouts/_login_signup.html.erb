@@ -1,4 +1,8 @@
 <div style="text-align:right; padding: 10px;">
-  <a href="/signup" class="btn btn-default">Sign Up</a>
-  <a href="/login" class="btn btn-default">Log In</a>
+  <% if current_user %>
+    <a href="/logout" class="btn btn-danger">Log Out</a>
+  <% else %>
+    <a href="/signup" class="btn btn-default">Sign Up</a>
+    <a href="/login" class="btn btn-default">Log In</a>
+  <% end %>
 </div>
