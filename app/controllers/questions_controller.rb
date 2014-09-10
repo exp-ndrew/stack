@@ -34,7 +34,7 @@ class QuestionsController < ApplicationController
 private
 
   def question_params
-    params.require(:question).permit(:question, :user_id)
+    params.require(:question).permit(:question, :content, :user_id)
   end
 
 end
