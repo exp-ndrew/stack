@@ -1,7 +1,7 @@
 <% @vote = Vote.new %>
 <table style="background: #eee; margin: 5px; border-radius: 5px;">
   <tr>
-    <td>
+    <td style="text-align: center;">
       <!-- Upvote Button -->
       <%= form_for @vote do |f| %>
         <%= f.hidden_field :user_id, :value => current_user.id %>
@@ -19,6 +19,13 @@
     </td>
     <td style="padding: 5px; vertical-align: text-top;">
       <%= @response.response %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td style="font-size: 75%;">
+      <%= @response.votes.length %> votes | Written by <strong><%= @response.user.full_name %></strong>
     </td>
   </tr>
 
