@@ -10,7 +10,7 @@ class ResponsesController < ApplicationController
     if @response.save()
       flash[:notice] = "Saved"
       respond_to do |format|
-        # format.html { redirect_to question_path(response_params[:question_id]) }
+        format.html { redirect_to @question }
         format.js
       end
     else

@@ -5,10 +5,17 @@
 A clone of Stack Overflow.
 
 
-## CURRENTLY WORKING ON:* As a user, I want to ask a question, so that I can get help with a programming problem I'm having. Users must have an account and sign in to ask questions.
+## CURRENTLY WORKING ON: AJAX to append responses to questions
 
+  *
 
+## TO FIX LIST
 
+* Tooltip for log in users
+
+## User Stories
+
+* As a user, I want to ask a question, so that I can get help with a programming problem I'm having. Users must have an account and sign in to ask questions.
 
 * As a user, I want to answer a question, so that I can help somebody else out. Use AJAX to add a response to the question's page without reloading it!
 
