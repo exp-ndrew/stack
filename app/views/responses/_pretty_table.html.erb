@@ -1,0 +1,29 @@
+<% @vote = Vote.new %>
+<table style="background: #eee; margin: 5px; border-radius: 5px;">
+  <tr>
+    <td>
+      <!-- Upvote Button -->
+      <%= form_for @vote do |f| %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.hidden_field :response_id, :value => @response.id %>
+        <%= f.hidden_field :value, :value => 1 %>
+        <%= f.button "⬆︎", :class => "btn btn-default btn-xs" %>
+      <% end %>
+      <!-- Downvote Button -->
+      <%= form_for @vote do |f| %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.hidden_field :response_id, :value => @response.id %>
+        <%= f.hidden_field :value, :value => -1 %>
+        <%= f.button "⬇︎", :class => "btn btn-default btn-xs" %>
+      <% end %>
+    </td>
+    <td style="padding: 5px; vertical-align: text-top;">
+      <%= @response.response %>
+    </td>
+  </tr>
+
+</table>
+
+
+
+
