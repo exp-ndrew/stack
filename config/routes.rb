@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :questions
+  resources :votes, :only => [:new, :create]
 
   resources :sessions, :only => [:new, :create, :destroy]
 

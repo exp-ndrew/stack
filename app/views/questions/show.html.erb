@@ -6,7 +6,22 @@
 
 <ul id="responses">
   <% @question.responses.each do |response| %>
-    <li><%= response.response %></li>
+    <li>
+      <%= form_for @vote do |f| %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.hidden_field :response_id, :value => response.id %>
+        <%= f.hidden_field :value, :value => 1 %>
+        <%= f.button :upvote, :class => "btn btn-success btn-xs" %>
+      <% end %>
+      <%= form_for @vote do |f| %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.hidden_field :response_id, :value => response.id %>
+        <%= f.hidden_field :value, :value => -1 %>
+        <%= f.button :downvote, :class => "btn btn-danger btn-xs" %>
+      <% end %>
+
+      <%= response.response %>
+    </li>
   <% end %>
 </ul>
 
