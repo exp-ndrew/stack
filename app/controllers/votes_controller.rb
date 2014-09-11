@@ -15,7 +15,7 @@ class VotesController < ApplicationController
       flash[:notice] = "You have successfully voted."
       respond_to do |format|
         format.html { redirect_to @question }
-        format.js { render 'creatddde.js.erb'}
+        format.js
       end
     else
       flash[:alert] = "Please try again."
