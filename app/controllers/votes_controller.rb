@@ -9,20 +9,20 @@ class VotesController < ApplicationController
 
   def create
     @vote = Vote.new(vote_params)
+    @response = Response.find(@vote.response_id)
+
     if @vote.save
       flash[:notice] = "You have successfully voted."
-      redirect_to question_path
+      respond_to do |format|
+        format.html { redirect_to @question }
+        format.js { render 'creatddde.js.erb'}
+      end
     else
       flash[:alert] = "Please try again."
-      redirect_to question_path
+      redirect_to @question
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
 
 private
 
@@ -31,4 +31,3 @@ private
   end
 
 end
-
